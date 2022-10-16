@@ -3,6 +3,8 @@ from datetime import datetime, timedelta
 
 from faker import Faker
 
+import numpy as np
+
 NOW = datetime.now()
 THIRTY_YEARS_AGO = NOW - timedelta(days=30*365)
 
@@ -22,4 +24,10 @@ class Employee(object):
         return f"<{self.name}> ({self.id}) zespół <{self.team}> zatrudniony na <{self.employment_type}>"
 
 
+class Element(object):
+    def __init__(self):
+        self.id = id(self)
+        self.step_1 = np.random.gamma(shape=3, scale=1, size=1000)
+        self.step_2 = np.random.random(size=1000)
+        self.step_3 = np.random.exponential(scale=1, size=1000)
 

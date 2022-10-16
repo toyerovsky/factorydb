@@ -1,6 +1,16 @@
-from factorydb.helpers import generate_employees
+from faker import Faker
 
-employees = generate_employees()
+from factorydb.generators import generate_employees
 
-for employee in employees:
-    print(employee)
+
+def main():
+    fake = Faker(['pl-PL'])
+
+    employees = generate_employees(fake)
+
+    for employee in employees:
+        print(employee)
+
+
+if __name__ == "__main__":
+    main()
