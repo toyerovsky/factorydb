@@ -9,6 +9,8 @@ python = "^3.10"
 Faker = "^15.1.1"
 pandas = "^1.5.0"
 numpy = "^1.23.4"
+jupyter = "^1.0.0"
+altair = "^4.2.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"

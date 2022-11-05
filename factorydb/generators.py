@@ -20,10 +20,10 @@ def generate_employees_with_elements(employees):
     for employee in employees:
         for element in employee.elements:
             yield {
-                "Item number": f"{element.id}-{employee.id}",
-                "Step 1": element.step_1,
-                "Step 2": element.step_2,
-                "Step 3": element.step_3,
-                "Employee id": employee.id
+                "item_number": f"{element.id}-{employee.id}",
+                "step_1": element.step_1,
+                "step_2": element.step_2,
+                "step_3": element.step_3,
+                "employee_id": employee.id
             }
 
